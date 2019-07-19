@@ -40,5 +40,23 @@ python2.7 ROSE2_main.py \
 -r /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/h3k27ac_jurkat_hs_chipseq_SRR1057274.bam \
 -o /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/rose
 
+# Get the Core Regulatory Circuits (CRCs) using crc2
+# Needs sudo pip install networkx==1.9.1
+python2.7 CRC2.py \
+-e /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/rose/h3k27ac_jurkat_summits_AllEnhancers.table.txt \
+-b /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/h3k27ac_jurkat_hs_chipseq_SRR1057274.bam \
+-g HG19 \
+-o /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/crc \
+-n h3k27ac_jurkat
+
+# # Generate plots as a standard output of the network construction algorithm contained in COLTRON
+# coltron -e /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/rose/h3k27ac_jurkat_summits_AllEnhancers.table.txt \
+# -b /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/h3k27ac_jurkat_hs_chipseq_SRR1057274.bam \
+# -g HG19 \
+# -o /home/rad/users/gaurav/projects/trn/output/ott_etal_2018/output/coltron \
+# -n h3k27ac_jurkat
+
+
+
 # Analyze ATACseq data using atacseq pipeline
 # https://github.com/tobiasrausch/ATACseq
