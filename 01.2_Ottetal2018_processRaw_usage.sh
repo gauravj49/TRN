@@ -60,3 +60,4 @@ python2.7 CRC2.py \
 
 # Analyze ATACseq data using atacseq pipeline
 # https://github.com/tobiasrausch/ATACseq
+# https://informatics.fas.harvard.edu/atac-seq-guidelines.html
